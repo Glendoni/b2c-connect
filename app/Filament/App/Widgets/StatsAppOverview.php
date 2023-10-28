@@ -15,7 +15,7 @@ class StatsAppOverview extends BaseWidget
     {
         return [
             Stat::make('Users', Team::find(Filament::getTenant())->first()->members->count())
-                ->description('All users from the database')
+                ->description('All users from the database.')
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('success'),
@@ -24,7 +24,7 @@ class StatsAppOverview extends BaseWidget
                 ->descriptionIcon('heroicon-m-arrow-trending-down')
                 ->color('danger'),
             Stat::make('Employees', Employee::query()->whereBelongsTo(Filament::getTenant())->count())
-                ->description('All employees from the database')
+                ->description('All employees from the database.')
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->color('success'),
         ];
