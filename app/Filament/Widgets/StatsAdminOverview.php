@@ -14,12 +14,12 @@ class StatsAdminOverview extends BaseWidget
     {
         return [
             Stat::make('Users', User::query()->count())
-                ->description('All users from the database')
+                ->description('All users from the databaseoo')
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->chart([7, 2, 10, 3, 15, 4, 17])
                 ->color('success'),
             Stat::make('Teams', Team::query()->count())
-                ->description('All teams from the database.')
+                ->description('All teams from the databaseoo')
                 ->descriptionIcon('heroicon-m-arrow-trending-down')
                 ->color('danger'),
             Stat::make('Employees', Employee::query()->count())
